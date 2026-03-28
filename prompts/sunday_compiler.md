@@ -111,11 +111,21 @@ source .venv/bin/activate && python3 -m src.epub_builder --input output/content.
 source .venv/bin/activate && python3 -m src.email_sender --epub "output/kindle_letter_$(date +%Y_%m_%d).epub"
 ```
 
-## Step 7: Clear Weekly Store
+## Step 7: Save Sent History & Clear Weekly Store
 
-After successful send:
+After successful send, save all sent article URLs to history (prevents duplicates in future weeks), then clear the weekly store:
 ```bash
-source .venv/bin/activate && python3 -c "from src.article_store import clear_weekly; clear_weekly(); print('Weekly store cleared for next week')"
+source .venv/bin/activate && python3 -c "
+from src.article_store import load_articles, save_to_sent_history, clear_weekly
+from src.config import TOPICS
+all_articles = []
+for t in TOPICS:
+    all_articles.extend(load_articles(t['id']))
+save_to_sent_history(all_articles)
+print(f'Saved {len(all_articles)} URLs to sent history')
+clear_weekly()
+print('Weekly store cleared for next week')
+"
 ```
 
 ## Step 8: Report

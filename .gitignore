@@ -1,5 +1,6 @@
 .env
 output/
+sent_history.json
 __pycache__/
 *.egg-info/
 *.pyc
