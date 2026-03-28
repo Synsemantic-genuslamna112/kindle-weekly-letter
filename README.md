@@ -2,6 +2,16 @@
 
 Automated weekly Kindle newsletter powered by Claude Code. AI research agents collect articles daily across customizable topics, compile them into a readable EPUB book, and deliver to your Kindle every Sunday.
 
+<p align="center">
+  <img src="assets/kindle_screenshot_1.png" width="380" alt="Weekly Tech Digest cover page on Kindle" />
+  &nbsp;&nbsp;
+  <img src="assets/kindle_screenshot_2.png" width="380" alt="Full article reading experience on Kindle" />
+</p>
+
+<p align="center">
+  <em>Cover page with all topics listed &nbsp;|&nbsp; Full articles readable directly on Kindle — no links needed</em>
+</p>
+
 ## How It Works
 
 ```
@@ -36,7 +46,7 @@ Topics are fully customizable — add your own with `/add-topic`.
 ### Setup
 
 ```bash
-git clone https://github.com/ShawnBaek/kindle-letter.git
+git clone https://github.com/ShawnBaek/kindle-weekly-letter.git
 cd kindle-letter
 ```
 
@@ -118,7 +128,7 @@ The skill creates the agent prompt, registers the topic, and updates the collect
 If you want to install this as a Claude Code plugin:
 
 ```
-/plugin marketplace add https://raw.githubusercontent.com/ShawnBaek/kindle-letter/main/marketplace.json
+/plugin marketplace add https://raw.githubusercontent.com/ShawnBaek/kindle-weekly-letter/main/marketplace.json
 /plugin install kindle-letter
 ```
 
