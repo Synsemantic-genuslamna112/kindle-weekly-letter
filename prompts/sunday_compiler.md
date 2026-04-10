@@ -72,8 +72,27 @@ For each approved article:
    - Keep the original author's voice and insights
    - **Target 400-800 words per article** (longer is fine for rich content)
    - If the source is a tutorial or guide, include the step-by-step instructions
-   - If the source has code examples, include them
+   - If the source has code examples, include them with syntax highlighting
 3. Format as clean HTML (paragraphs, bold for key points, blockquotes for notable quotes, code blocks for code)
+
+**Code syntax highlighting**: When including code snippets, wrap them in `<pre><code>` and use these CSS classes for highlighting:
+- `<span class="kw">` for keywords (func, let, var, class, if, return, import, def, fn)
+- `<span class="typ">` for types (String, Int, View, Vec, List)
+- `<span class="fn">` for function names
+- `<span class="str">` for string literals
+- `<span class="num">` for numbers
+- `<span class="cm">` for comments
+- `<span class="attr">` for attributes (@State, @Published, #[derive])
+- `<span class="op">` for operators (->, =, ==)
+- Add `<p class="code-label">SWIFT</p>` or similar above code blocks to label the language
+
+Example:
+```html
+<p class="code-label">SWIFT</p>
+<pre><code><span class="kw">func</span> <span class="fn">greet</span>(<span class="kw">_</span> name: <span class="typ">String</span>) <span class="op">-></span> <span class="typ">String</span> {
+    <span class="kw">return</span> <span class="str">"Hello, \(name)"</span>
+}</code></pre>
+```
 
 ## Step 4: Write Content JSON
 

@@ -21,7 +21,11 @@
       {"name": "Google AI Blog", "url": "blog.google/technology/ai", "votes": 5, "status": "active"},
       {"name": "OpenAI Developer Blog", "url": "platform.openai.com/blog", "votes": 5, "status": "active"},
       {"name": "Google Developers Blog", "url": "developers.googleblog.com", "votes": 4, "status": "active"},
-      {"name": "Meta AI Blog", "url": "ai.meta.com/blog", "votes": 4, "status": "active"}
+      {"name": "Meta AI Blog", "url": "ai.meta.com/blog", "votes": 4, "status": "active"},
+      {"name": "Anthropic Engineering", "url": "anthropic.com/engineering", "votes": 5, "status": "active"},
+      {"name": "OpenAI Developer Blog", "url": "developers.openai.com/blog", "votes": 5, "status": "active"},
+      {"name": "Apple Machine Learning", "url": "machinelearning.apple.com", "votes": 5, "status": "active"},
+      {"name": "Kodeco AI", "url": "kodeco.com/ai", "votes": 4, "status": "active"}
     ]
   },
   "ios": {
@@ -33,7 +37,10 @@
       {"name": "WWDC Sessions", "url": "developer.apple.com", "votes": 4, "status": "active"},
       {"name": "Swift by Sundell", "url": "swiftbysundell.com", "votes": 4, "status": "active"},
       {"name": "Antoine van der Lee", "url": "avanderlee.com", "votes": 3, "status": "active"},
-      {"name": "Donny Wals", "url": "donnywals.com", "votes": 3, "status": "active"}
+      {"name": "Donny Wals", "url": "donnywals.com", "votes": 3, "status": "active"},
+      {"name": "Hacking with Swift Articles", "url": "hackingwithswift.com/articles", "votes": 5, "status": "active"},
+      {"name": "Apple Developer News", "url": "developer.apple.com/news", "votes": 5, "status": "active"},
+      {"name": "Kodeco iOS", "url": "kodeco.com/ios", "votes": 4, "status": "active"}
     ]
   },
   "business": {
